@@ -6,10 +6,14 @@
 }
 
 body {
-  background: #F1F1F1;
-  font-family: 'Roboto', sans-serif;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+  background: #f1f1f1;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+}
+
+body.dark {
+  background: #111111;
 }
 
 a {
@@ -26,7 +30,7 @@ a {
 }
 
 nav {
-  background: #FEFEFE;
+  background: #fefefe;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,15 +42,29 @@ nav {
           align-items: center;
   padding: 15px 20px;
   border-radius: 5px;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
   -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
           box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
 }
 
+body.dark nav {
+  background: #222222;
+  -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+          box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+
+body.dark nav a {
+  color: #c8c8c8;
+}
+
+body.dark nav a:hover {
+  color: #fefefe;
+}
+
 nav .logotipo {
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 nav .enlaces {
@@ -66,6 +84,54 @@ nav .enlaces a:hover {
   color: #707070;
 }
 
+.switch {
+  background: #343d5b;
+  border-radius: 100px;
+  border: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f1f1f1;
+  top: 0;
+  bottom: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  background: orange;
+  color: #0000;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #ffff;
+}
+
 .grid {
   display: -ms-grid;
   display: grid;
@@ -76,7 +142,7 @@ nav .enlaces a:hover {
 }
 
 .grid .card {
-  background: #FEFEFE;
+  background: #fefefe;
   padding: 20px;
   border-radius: 5px;
   -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
@@ -90,8 +156,14 @@ nav .enlaces a:hover {
   position: relative;
   min-height: 195px;
   margin-top: 50px;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+body.dark .grid .card {
+  background: #222222;
+  -webkit-box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+          box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
 }
 
 .grid .card img {
@@ -123,23 +195,23 @@ nav .enlaces a:hover {
   background: #111111;
   text-align: center;
   border-radius: 5px;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
 .grid .card .botones .boton.primario {
-  background: #3E60E9;
+  background: #3e60e9;
 }
 
 .grid .card .botones .boton.primario:hover {
-  background: #254BE6;
+  background: #254be6;
 }
 
 .grid .card .botones .boton.secundario {
-  background: #C8C8C8;
+  background: #c8c8c8;
 }
 
 .grid .card .botones .boton.secundario:hover {
-  background: #ACABAB;
+  background: #acabab;
 }
 /*# sourceMappingURL=estilos.css.map */
